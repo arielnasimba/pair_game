@@ -62,8 +62,8 @@ function flipCard() {
     }
 
     second_card = this;
-    score++;
-    document.querySelector(".score").textContent = score;
+    // score++;
+    // document.querySelector(".score").textContent = score;
     lock_board = true;
 
     checForMatch();
@@ -76,6 +76,8 @@ function checForMatch() {
 
     if (is_match) {
         disableCards();
+        score++;
+        document.querySelector(".score").textContent = score;
         if (document.querySelectorAll(".card.flipped").length === cards.length) {
             setTimeout(() => {
                 alert("Congratulations! You found all the matches!");
