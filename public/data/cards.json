@@ -1,0 +1,18 @@
+[
+    {
+        "image": "./public/assets/ace_card.png",
+        "name": "ace"
+    },
+    {
+        "image": "./public/assets/two_card.png",
+        "name": "two"
+    },
+    {
+        "image": "./public/assets/three_card.png",
+        "name": "three"
+    },
+    {
+        "image": "./public/assets/fourth_card.png",
+        "name": "fourth"
+    }
+]

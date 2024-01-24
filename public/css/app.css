@@ -1,0 +1,155 @@
+body{
+    min-height: 100vh;
+    min-width: 100vh;
+    background-image: url(../../src/image/bck_bubbles.jpg);
+    background-position: center;
+    background-size: cover;
+    /* background: linear-gradient(to right, #00bfff, #00ff7f); */
+    /* background-image: linear-gradient(
+        125deg,
+      hsl(240deg 7% 46%) 0%,
+      hsl(268deg 7% 42%) 5%,
+      hsl(301deg 7% 37%) 10%,
+      hsl(327deg 11% 34%) 15%,
+      hsl(343deg 15% 31%) 20%,
+      hsl(356deg 17% 28%) 25%,
+      hsl(8deg 22% 24%) 30%,
+      hsl(19deg 30% 20%) 35%,
+      hsl(29deg 38% 15%) 40%,
+      hsl(41deg 49% 11%) 45%,
+      hsl(54deg 94% 6%) 50%,
+      hsl(47deg 42% 12%) 55%,
+      hsl(40deg 33% 17%) 60%,
+      hsl(34deg 27% 22%) 65%,
+      hsl(29deg 23% 27%) 70%,
+      hsl(24deg 20% 33%) 75%,
+      hsl(20deg 17% 39%) 80%,
+      hsl(15deg 15% 44%) 85%,
+      hsl(11deg 13% 50%) 90%,
+      hsl(6deg 14% 56%) 95%,
+      hsl(0deg 15% 62%) 100% 
+        );  */
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.actions{
+    display: flex;
+    justify-content: center;
+}
+
+.actions button{
+    padding: 8px 16px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: rgb(173, 146, 231);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.grid_container{
+    display: grid;
+    width: fit-content;
+    align-self: center;
+    /* background-color: red; */
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr );
+    /* background-color: red !important; */
+    perspective: 700px
+
+}
+
+.card {
+    height: 200px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 500ms ease-in-out;
+}
+
+.front-image{
+    width: 100%;
+    height: 100%;
+}
+
+.card.flipped{
+    transform: rotateY(180deg); /*rotateZ(180deg)*/;
+}
+
+.front,
+.back{
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    width: 100%;
+}
+
+
+.card .front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+
+.card .back{
+    background-image: url(../../src/image/pngegg.png) ,url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='72' height='43.875' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(259, 64%, 74%, 1)'/><path d='m14.296 7.185 7.236 7.234L36.002-.048l14.47 14.47 7.236-7.233L36-14.518Zm-7.275 7.251 7.258 7.26 7.259-7.26-7.258-7.259zm-28.798 14.76 7.237 7.237L-.023 21.916 14.452 36.39l7.26-7.258L0 7.42Zm50.746 7.193-7.258-7.258-7.26 7.258 7.26 7.26zm57.568.046 7.24-7.238L72 7.42 50.282 29.137l7.259 7.259L72.02 21.918Zm-28.993-.042-7.26-7.258-7.258 7.258 7.26 7.26zm.233 14.742L36 29.358 14.223 51.135l7.258 7.258L36 43.875l14.518 14.517ZM50.453 14.45l7.259 7.26 7.258-7.26-7.258-7.257z'  stroke-width='1' stroke='hsla(122, 39%, 49%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    /* ,linear-gradient(
+    125deg,
+  hsl(240deg 7% 46%) 0%,
+  hsl(268deg 7% 42%) 5%,
+  hsl(301deg 7% 37%) 10%,
+  hsl(327deg 11% 34%) 15%,
+  hsl(343deg 15% 31%) 20%,
+  hsl(356deg 17% 28%) 25%,
+  hsl(8deg 22% 24%) 30%,
+  hsl(19deg 30% 20%) 35%,
+  hsl(29deg 38% 15%) 40%,
+  hsl(41deg 49% 11%) 45%,
+  hsl(54deg 94% 6%) 50%,
+  hsl(47deg 42% 12%) 55%,
+  hsl(40deg 33% 17%) 60%,
+  hsl(34deg 27% 22%) 65%,
+  hsl(29deg 23% 27%) 70%,
+  hsl(24deg 20% 33%) 75%,
+  hsl(20deg 17% 39%) 80%,
+  hsl(15deg 15% 44%) 85%,
+  hsl(11deg 13% 50%) 90%,
+  hsl(6deg 14% 56%) 95%,
+  hsl(0deg 15% 62%) 100% 
+    ); */
+    
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25 )
+
+}
+
+
